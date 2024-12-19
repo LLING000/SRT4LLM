@@ -36,4 +36,4 @@
 SRT4LLM 提出了三种提示工程方法：简单提示（Simple Prompt, SP）、引导提示（Guiding Prompt, GP）和示例提示（Example Prompt, EP）。
 
 ### 使用
-文件包含使用简单空间场景和复杂空间场景对三种空间关系提问的prompt模板，将大模型连接即可使用。
+文件包含使用简单空间场景和复杂空间场景对三种空间关系提问的prompt模板，连接大模型即可使用。
