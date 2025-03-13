@@ -4,7 +4,7 @@
 ## SRT4LLM框架
 为系统评估大语言模型在空间地理问题上的认知能力，本研究提出了面向大模型的空间认知测试标准框架SRT4LLM。SRT4LLM架构包含三个递进的逻辑层次，一是三种基础空间关系；二是在此基础上的逐渐复杂的空间对象类型及其组合关系；三是从简单提示到引导性提示和示例性提示的渐次复杂的提示工程。
 
-![image](https://github.com/user-attachments/assets/6cfc0fa2-3b8d-4b04-a5ee-ba4e3374a4f9)
+![framework](https://github.com/user-attachments/assets/8800d0a5-ff46-479e-a72e-2a04e2b7824d)
 
 ## 标准化提问模板
 模板包括三个关键组成部分构成：任务指令、空间关系的定义（拓扑关系、方位关系和距离关系）以及被测对象的位置坐标。
@@ -32,8 +32,25 @@
 
 ![data_complex](https://github.com/user-attachments/assets/1fed23d5-244a-4139-84e8-0726e785e37d)
 
-## Prompt模板
+### Prompt模板
 SRT4LLM 提出了三种提示工程方法：简单提示（Simple Prompt, SP）、引导提示（Guiding Prompt, GP）和示例提示（Example Prompt, EP）。
 
-### 使用
+## 使用
 文件包含使用简单空间场景和复杂空间场景对三种空间关系提问的prompt模板，连接大模型即可使用。
+
+## Deepseek测试结果
+在本论文修改期间，DeepSeek发布，本文未将其纳入测试，测试结果将在此共享。
+
+### Deepseek测试准确率(%)
+
+|        |      | SP   | GP   | EP   |
+|--------|------|------|------|------|
+| topo   | rec  | 87.5 | 79.2 | 70.8 |
+|        | cir  | 83.3 | 100.0 | 75.0 |
+|        | complex | 58.3 | 54.2 | 58.3 |
+| dir    | rec  | 66.7 | 75.0 | 79.2 |
+|        | cir  | 58.3 | 54.2 | 62.5 |
+|        | complex | 45.8 | 66.7 | 66.7 |
+| dis    | rec  | 70.8 | 79.2 | 75.0 |
+|        | cir  | 95.8 | 95.8 | 100.0 |
+|        | complex | 20.8 | 45.8 | 29.2 |
